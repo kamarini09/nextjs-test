@@ -5,8 +5,9 @@ export default function Layout({children, navData}){
     return (
     <>
     <nav>
+        {/* every time i map i should put a key so it knows what changed */}
         {navData.map((obj) => {
-            return <Anchor href= {"/dogs/" + obj.slug}> {obj.title} </Anchor>
+            return <Anchor key={obj.slug} href= {"/dogs/" + obj.slug}> {obj.title} </Anchor>
         }
 
         )}
